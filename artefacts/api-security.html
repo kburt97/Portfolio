@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>API Security Requirements — Artefact</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="../index.html" class="logo"><strong>Kalifa Burton</strong> <span>Portfolio</span></a>
+      <nav><a href="#menu">Menu</a></nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../module2.html">Module 2</a></li>
+        <li><a href="../artefacts/iot-discussion.html">IoT Discussion Artefact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <header class="major">
+          <h2>Artefact: API Security Requirements Specification</h2>
+          <p>Evaluation of API security requirements and a brief SRS for safe data sharing between Python and JSON/XML/SQL.</p>
+        </header>
+
+        <section>
+          <h3>Overview</h3>
+          <p>This artefact presents a Security Requirements Specification (SRS) evaluating the security considerations of a public REST API integrated with Python for data collection and sharing. It identifies key risks and provides mitigation requirements for secure communication, authentication, validation, storage, and governance when exporting data to JSON, XML, or SQL formats.</p>
+        </section>
+
+        <section>
+          <h3>Security Requirements Specification (SRS)</h3>
+          <p><strong>Chosen API:</strong> OpenWeatherMap REST API (JSON over HTTPS).</p>
+
+          <h4>Scope and Assets</h4>
+          <ul>
+            <li>Assets: API key, response payloads, SQL database, JSON/XML exports, logs.</li>
+            <li>Flow: Python client → HTTPS request → API response → validation → SQL store → JSON/XML export → logs.</li>
+          </ul>
+
+          <h4>Threat Model</h4>
+          <ul>
+            <li>Stolen API keys, MITM attacks, SQL/JSON/XML injection, insecure XML parsing (XXE), deserialisation, rate-limit abuse, dependency vulnerabilities, PII leakage.</li>
+          </ul>
+
+          <h4>Security Requirements & Mitigations</h4>
+          <ul>
+            <li><strong>Transport:</strong> HTTPS only, certificate verification, request timeouts and retries.</li>
+            <li><strong>Authentication:</strong> API key stored securely in environment variables; rotation and least privilege.</li>
+            <li><strong>Validation:</strong> Treat all input as untrusted; validate fields and disable XML external entities.</li>
+            <li><strong>Storage:</strong> Parameterised SQL; encrypt database and backups; redact sensitive exports.</li>
+            <li><strong>Rate limiting:</strong> Implement client-side backoff and caching.</li>
+            <li><strong>Logging:</strong> Log status codes and errors but exclude keys or PII.</li>
+            <li><strong>Privacy:</strong> Data minimisation and retention policy for raw data.</li>
+            <li><strong>Dependencies:</strong> Use pinned versions; perform vulnerability scans.</li>
+          </ul>
+
+          <h4>Secure Python Patterns</h4>
+          <pre><code># Safe API call
+import os, requests
+from requests.adapters import HTTPAdapter, Retry
+
+API_KEY = os.environ["OWM_API_KEY"]
+BASE = "https://api.openweathermap.org/data/2.5/weather"
+s = requests.Session()
+retries = Retry(total=3, backoff_factor=0.5, status_forcelist=[429,500,502,503,504])
+s.mount("https://", HTTPAdapter(max_retries=retries))
+resp = s.get(BASE, params={"q":"Cardiff,GB","appid":API_KEY}, timeout=(3.05,10))
+resp.raise_for_status()
+data = resp.json()
+
+# Safe SQL insert
+import sqlite3
+conn = sqlite3.connect("weather.db")
+cur = conn.cursor()
+cur.execute("INSERT INTO weather(city,temp_c) VALUES (?,?)",
+            (data["name"], data["main"]["temp"]))
+conn.commit()
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Reflection</h3>
+          <p>This activity strengthened my understanding of applied security in data science workflows. Evaluating the API’s security posture improved my awareness of practical vulnerabilities such as injection, misconfiguration, and secret management. Translating those risks into technical requirements deepened my ability to combine programming and governance principles. I can now design Python data pipelines that maintain confidentiality, integrity, and availability from ingestion to storage and export.</p>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p>&copy; Kalifa Burton</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
