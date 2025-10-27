@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>GFS Backup Procedure</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="../index.html" class="logo"><strong>Kalifa Burton</strong> <span>Portfolio</span></a>
+      <nav><a href="#menu">Menu</a></nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../module2.html">Module 2</a></li>
+        <li><a href="../artefacts/iot-discussion.html">IoT Discussion Artefact</a></li>
+        <li><a href="../artefacts/api-security.html">API Security Artefact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <header class="major">
+          <h2>Artefact: Critique of the Grandfather–Father–Son (GFS) Backup Procedure</h2>
+          <p>critical evaluation</p>
+        </header>
+
+        <section>
+          <h3>Overview</h3>
+          <p>This artefact briefly evaluates the GFS backup rotation (daily/weekly/monthly) with emphasis on storage efficiency for large databases and comparative effectiveness versus alternative backup strategies.</p>
+        </section>
+
+        <section>
+          <h3>Critical Evaluation</h3>
+          <p>
+            The Grandfather–Father–Son (GFS) backup procedure is a tiered rotation system that cycles daily, weekly, and 
+            monthly backups to balance retention and resource efficiency. By re-using media within structured intervals, 
+            GFS minimises redundant full backups and reduces storage load, which is critical when handling large databases. 
+            This incremental approach parallels the principles of efficient data wrangling described by McKinney (2022), 
+            where controlled redundancy and clear versioning maintain data integrity while limiting resource overhead. 
+            Similarly, Cove (2024) highlights the value of systematic data management for scalable analytics — a concept 
+            echoed in GFS’s orderly retention hierarchy. Compared with continuous or full-mirror backups, GFS offers a 
+            cost-effective and operationally stable method, though recovery granularity may be coarser. Overall, GFS remains 
+            an effective strategy when balanced with modern automation and off-site replication.
+          </p>
+        </section>
+
+        <section>
+          <h3>Reflection</h3>
+          <p>This task strengthened my ability to relate classical IT resilience patterns to data-science workflows: controlled redundancy, verifiable checkpoints, and cost-aware retention. I will prioritise rotation policies, routine restore tests, and clear retention schedules when designing future data pipelines.</p>
+        </section>
+
+        <section>
+          <h3>References</h3>
+          <ul>
+            <li>Cove, V. (2024) ‘Visualize COVID-19 trends in ArcGIS Insights.’ <em>Learn ArcGIS</em> (Archived). Esri. Available at: https://www.arcgis.com/home/item.html?id=7fe3a584fa6544f6ac3a0b7ed827074f.</li>
+            <li>McKinney, W. (2022) <em>Python for Data Analysis: Data Wrangling with Pandas, NumPy, and Jupyter</em>. 3rd edn. Sebastopol, CA: O’Reilly Media.</li>
+          </ul>
+        </section>
+
+        <p><a href="../module3.html" class="button">⬅ Back to Module 3</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p>&copy; Kalifa Burton</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
