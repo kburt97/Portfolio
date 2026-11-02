@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Air BnB Team Project — Artefact</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="../index.html" class="logo"><strong>Kalifa Burton</strong> <span>Portfolio</span></a>
+      <nav><a href="#menu">Menu</a></nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../module2.html">Module 2</a></li>
+        <li><a href="../scraper.html">Scraper</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <header class="major">
+          <h2>Artefact: Air BnB Team Project</h2>
+          <p>Machine Learning Team Project .</p>
+        </header>
+
+        <section>
+          <h3>Overview</h3>
+          <p>This artefact documents my contribution to a collaborative Airbnb business analysis project (Classical Machine Learning – Regression and Clustering).  
+             The project used the 2019 New York City Airbnb dataset to investigate how regression models and clustering techniques could support listing price 
+             prediction and neighbourhood market segmentation.  My individual contribution focused on evaluating the business implications of these approaches, 
+             particularly their potential to improve pricing strategies, revenue forecasting, host profitability and targeted business decisions.</p>
+        </section>
+
+        <section>
+          <h3>My Contribution- Business Implications</h3>
+          <p>The price prediction and neighbourhood segmentation outputs generate several actionable insights for Airbnb’s strategic decision making around pricing 
+             and host support in the NYC market.  Predictive pricing enhances revenue forecasting accuracy by estimating expected listing values based on observable 
+             property and location attributes.</p>
+
+          <p>Accurate forecasts help align host pricing behaviour with actual demand, reducing revenue leakage from underpricing and improving host profitability 
+             (Zervas et al., 2017).  This also enables Airbnb to refine commission forecasts, supporting strategic financial planning.</p>
+          
+          <p>Market segmentation uncovers customer and listing clusters, allowing Airbnb to tailor pricing strategies and platform support services.  For example, 
+             segmentation can differentiate premium urban core listings from mid range or budget listings in outer boroughs, enabling targeted pricing recommendations 
+             and service tiering.  Research shows that segmenting by location and amenities reveals commercially distinct market groups with different pricing and 
+             demand characteristics (Guttentag, 2013).  By tailoring pricing guidance, visibility tools and marketing incentives to segment specific characteristics, 
+             Airbnb can allocate promotional spend more efficiently, maximising returns across neighbourhood markets.</p>
+          
+          <p>Combining regression based price prediction with clustering enhances operational decisions by enabling neighbourhood level pricing guidance and 
+             differentiated host support, while maintaining model interpretability, a requirement for platform governance and host adoption (Einav et al., 2016).  
+             Interpretable analytics allow Airbnb to justify pricing to hosts, reinforcing trust and compliance.  This classical ML approach translates into actionable 
+             strategic levers including: targeted pricing, segment specific incentives, and more predictable revenue outcomes, strengthening competitive positioning 
+             in one of Airbnb’s most data rich markets.</p>
+
+<h3>References</h3>
+          <ul>
+            <li>Bender, E.M., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021) ‘On the dangers of stochastic parrots: Can language models be too big?’, Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, pp. 610–623</li>
+            <li>Harrer, S. (2023) 'Attention is not all you need: The complicated case of ethically using large language models in healthcare and medicine', eBioMedicine, 90, 104512</li>
+            <li>Hutson, M. (2021) 'Robo-writers: The rise and risks of language-generating AI', Nature, 591(7848), pp. 22–25</li>
+            <li>Kollman, M. et al. (2023) ‘AI language models in human reproduction research: exploring ChatGPT’s potential to assist academic writing’, Human Reproduction, 38(12), pp. 2281–2288</li>
+            <li>Koplin, J.J. (2023) 'Dual-use implications of AI text generation', Ethics and Information Technology, 25, article 32</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Summary Post </h3>
+          <p>AI writing tools have the potential to transform how written information is produced, from routine administrative tasks to academic and creative 
+            writing.  Having considered Hutson's (2021) discussion of language generating AI, I believe these technologies offer considerable benefits, 
+            provided their limitations are recognised and appropriate human oversight is maintained.</p>
+
+          <p>>In administrative environments, AI writers can improve efficiency by drafting emails, summarising meetings, preparing reports and organising 
+            information.  In laboratory healthcare, this could support the preparation of standard operating procedures (SOPs), staff communications and 
+            non-clinical documentation, allowing professionals to dedicate more time to operational and patient focused responsibilities.  AI can also 
+            assist with academic writing, brainstorming and improving the clarity of complex information.</p>
+          
+          <p>However, these benefits introduce significant risks, where Hutson (2021) highlights that language generating AI can produce convincing text 
+            without genuinely understanding its meaning.  This creates the possibility of inaccurate information being presented confidently.  
+            Bender et al. (2021) similarly discuss how language models can reproduce biases and generate misleading content based on their training data.  
+            In healthcare, these limitations are particularly concerning because inaccurate documentation or misleading clinical information could 
+            potentially compromise patient safety.  Harrer (2023) emphasises the importance of human oversight when applying large language models in 
+            healthcare.</p>
+
+          <p>Creative writing also raises questions surrounding originality, intellectual property and the potential displacement of human creativity.  
+            Although AI can generate ideas and assist with written expression, it may lack the personal experiences and emotional understanding that 
+            contribute to genuinely original work (Koplin, 2023).</p>
+
+          <p>My peer Mansour also raises a significant point regarding bias and the potential risk associated with machine learning systems exhibiting 
+            bias due to training models used.  This is an important consideration to make, particularly when discussing the use of AI in healthcare, 
+            due to the potential negative effects that could impact patient care.  Training models may represent a particular race, gender or sexuality 
+            in a skewed fashion, and this could pose a risk when implementing to real world practices.  It is important to factor in, and mitigate with 
+            human intervention and continuous testing as Mansour has mentioned. </p>
+
+          <p>Overall, I believe AI writers should be viewed as supportive tools rather than replacements for human judgement.  Their outputs should be 
+            critically evaluated, fact checked and reviewed before being used, particularly in healthcare environments.  Responsible implementation 
+            requires transparency, data protection and clear accountability.  Ultimately, the greatest benefit of AI writing technology will come from 
+            combining its efficiency with human expertise, critical thinking and professional responsibility.</p>
+        </section>
+
+        <section>
+          <h3>Reflection</h3>
+          <p>This discussion allowed me to explore the growing role of artificial intelligence in generating written content and critically consider 
+            its applications across different industries.  Reading Hutson (2021) helped me understand how language generating AI systems work and the 
+            opportunities they present, particularly in improving efficiency and reducing the time spent on routine administrative tasks.</p>
+
+          <p>I found it particularly interesting to consider how these technologies could be applied within laboratory healthcare.  For example, 
+            AI writing tools could assist with drafting communications, summarising information and preparing administrative documentation.  However, 
+            I also recognised that their use in healthcare requires particular caution because inaccurate or misleading information could have 
+            implications for clinical practice and patient safety.</p>
+
+          <p>Another important area of learning was understanding the limitations of AI generated content, including hallucinations, bias and the 
+            potential impact on originality and creativity.  This encouraged me to think more critically about the information produced by these 
+            systems rather than automatically accepting it as accurate.</p>
+
+          <p>Completing this discussion also made me reflect how I could use AI within my role as a Biomedical Scientist, working within Haematology 
+            and Blood Transfusion.  Consideration towards its usage in the context of SOP writing and document control has given me scope for 
+            exploration, and has allowed me to consider how I can be more efficient in the administrative side of my role.  These contributions have 
+            been widely received my senior management, and implementation looks promising. </p>
+
+          <p>Overall, this activity improved my awareness of the opportunities and limitations of generative AI.  It reinforced the importance of 
+            human judgement, critical thinking and responsible AI use when applying machine learning technologies to real world situations.</p>
+        </section>
+
+        <section>
+          <h3>References</h3>
+          <ul>
+            <li>Bender, E.M., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021) ‘On the dangers of stochastic parrots: Can language models be too big?’, Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, pp. 610–623</li>
+            <li>Harrer, S. (2023) 'Attention is not all you need: The complicated case of ethically using large language models in healthcare and medicine', eBioMedicine, 90, 104512</li>
+            <li>Hutson, M. (2021) 'Robo-writers: The rise and risks of language-generating AI', Nature, 591(7848), pp. 22–25</li>
+            <li>Kollman, M. et al. (2023) ‘AI language models in human reproduction research: exploring ChatGPT’s potential to assist academic writing’, Human Reproduction, 38(12), pp. 2281–2288</li>
+            <li>Koplin, J.J. (2023) 'Dual-use implications of AI text generation', Ethics and Information Technology, 25, article 32</li>
+          </ul>
+        </section>
+
+        <p><a href="../Module4.html" class="button">⬅ Back to Module 4</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p>&copy; Kalifa Burton</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
