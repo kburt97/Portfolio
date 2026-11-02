@@ -1,0 +1,138 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Jaccard Similarity Coefficient — Artefact</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="../index.html" class="logo"><strong>Kalifa Burton</strong> <span>Portfolio</span></a>
+      <nav><a href="#menu">Menu</a></nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../module2.html">Module 2</a></li>
+        <li><a href="../module4.html">Module 4</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <header class="major">
+          <h2>Artefact: Jaccard Similarity Coefficient</h2>
+          <p>A practical exercise exploring similarity measures and their application to data analysis.</p>
+        </header>
+
+        <section>
+          <h3>Overview</h3>
+          <p>This artefact documents a practical exercise exploring the Jaccard similarity coefficient, a statistical measure used to assess the similarity between two sets of data. The exercise involved comparing clinical characteristics and test results across three individuals to identify the degree of similarity between their records.</p>
+
+          <p>The purpose of the exercise was to develop an understanding of how similarity measures can be applied to data analysis and how the results can support comparisons between observations.</p>
+        </section>
+
+        <section>
+          <h3>Methodology</h3>
+          <p>The exercise involved comparing the clinical features and test results recorded for Jack, Mary and Jim.</p>
+
+          <p>The Jaccard similarity coefficient was calculated using the following formula:</p>
+
+          <p><strong>Jaccard coefficient = Intersection / Union</strong></p>
+
+          <ul>
+            <li><strong>Intersection:</strong> The number of positive features shared by both individuals.</li>
+            <li><strong>Union:</strong> The total number of positive features present across either individual's record.</li>
+          </ul>
+
+          <p>For this exercise, Y and P were treated as positive results, N was treated as negative, and A was treated as unknown and excluded from the calculations. Gender was also excluded because it was not a clinical feature being compared.</p>
+
+          <p>The coefficient produces a value between 0 and 1. A value closer to 1 indicates greater similarity, whereas a value closer to 0 indicates less similarity.</p>
+        </section>
+
+        <section>
+          <h3>Results and Interpretation</h3>
+
+          <p>The following results were obtained from the three pairwise comparisons:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Comparison</th>
+                <th>Intersection</th>
+                <th>Union</th>
+                <th>Jaccard coefficient</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jack and Mary</td>
+                <td>2</td>
+                <td>3</td>
+                <td>0.667</td>
+              </tr>
+              <tr>
+                <td>Jack and Jim</td>
+                <td>1</td>
+                <td>3</td>
+                <td>0.333</td>
+              </tr>
+              <tr>
+                <td>Jim and Mary</td>
+                <td>1</td>
+                <td>4</td>
+                <td>0.250</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>The results indicate that Jack and Mary had the greatest similarity, with a coefficient of approximately 0.667. Jack and Jim had a lower similarity of 0.333, while Jim and Mary had the lowest similarity at 0.250.</p>
+
+          <p>This demonstrates how the Jaccard coefficient can be used to quantify similarities between records rather than relying solely on visual comparisons of the data.</p>
+        </section>
+
+        <section>
+          <h3>Reflection</h3>
+
+          <p>Initially, I found this exercise challenging because I was unsure how to identify the intersection and union when comparing the different records. I particularly needed to understand which results should be included in the calculations and how negative or unknown values affected the comparison.</p>
+
+          <p>By working through each pair of individuals step by step, I developed a clearer understanding of how the coefficient is calculated. I learned that the intersection represents the positive features shared by both individuals, whereas the union includes all positive features present in either individual's record.</p>
+
+          <p>I also recognised the importance of interpreting the data consistently before performing calculations, particularly when dealing with unknown or missing values. This exercise improved my confidence in applying a mathematical measure to a practical dataset and helped me understand how similarity measures can support data analysis and comparison.</p>
+
+          <p>Overall, this was a useful learning experience because it allowed me to work through a concept I initially found difficult and develop a clearer understanding through practical application.</p>
+        </section>
+
+        <section>
+          <h3>References</h3>
+          <ul>
+            <li>Jaccard, P. (1901) 'Étude comparative de la distribution florale dans une portion des Alpes et des Jura', <em>Bulletin de la Société Vaudoise des Sciences Naturelles</em>, 37, pp. 547–579.</li>
+          </ul>
+        </section>
+
+        <p><a href="../module4.html" class="button">⬅ Back to Module 4</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p>&copy; Kalifa Burton</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
